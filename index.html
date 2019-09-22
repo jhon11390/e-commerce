@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>E-commerce</title>
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style>
+    body { margin-top: 70px; }
+  </style>
 </head>
 <body>
   <!-- Menu de navegacion-->
-  <nav class="navbar navbar-default navbar-inverse">
+  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -120,11 +124,11 @@
               </div>
                 
               <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-example-generic" role="buttondata-slide="prev">
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
               </a>
-              <a class="right carousel-control" href="#carousel-example-generic" role="buttondata-slide="next">
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
               </a>
@@ -142,7 +146,57 @@
                   <div class="caption">
                     <h3>Hipster Ultimate</h3>
                     <p>La Camiseta ideal para hipsters.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">$229</a> <href="#"class="btnbtn-default" role="button">Detalles</a></p>
+                    <p><a href="#" class="btn btn-primary" role="button">$229</a> 
+                    <!--Modal Camiseta 1 -->
+                    <a href="#" class="btn btn-default" role="button" data-toggle="modal" data-target="#myModal">Detalles</a>
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Hipster Ultimate</h4>
+                          </div>
+                          <div class="modal-body">
+                            <!-- Alerta -->
+                            <div class="alert alert-info" role="alert">
+                              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                              <span class="sr-only">Error:</span>
+                              Este producto esta agotado.
+                            </div>
+
+                            <!-- Descripcion y Comentarios-->
+                            <div>
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Descripcion</a></li>
+                                  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Comentarios</a></li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                  <div role="tabpanel" class="tab-pane active" id="home"><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit beatae maxime adipisci sapiente illo natus tenetur iure possimus dolore aliquam numquam, cum unde modi harum, voluptatum qui facilis praesentium odit!</div>
+                                  <div role="tabpanel" class="tab-pane" id="profile"><br>
+                                    <!-- Panel -->
+                                    <div class="panel panel-default">
+                                      <!-- Default panel contents -->
+                                      <div class="panel-heading">German Escobar comento hace 2 dias.</div>
+                                      <div class="panel-body">
+                                        <p>Esta camiseta esta increible, la quiero!</p>
+                                      </div>
+                                    </div>
+                                    <textarea name="comentario" class="form-control" placeholder="Ingresa tu comentario"></textarea>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Comprar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </p>
                   </div>
                 </div>
               </div>
