@@ -7,11 +7,8 @@
   <title>E-commerce</title>
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <style>
-    body { margin-top: 70px; }
-  </style>
 </head>
-<body>
+<body style="margin-top: 70px;">
   <!-- Menu de navegacion-->
   <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -23,7 +20,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">E-commerce</a>
+        <a class="navbar-brand" href="#" style="padding-left: 15px;">E-commerce</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -39,11 +36,11 @@
   <main class="container">
     <div class="row">
 
-      <!-- Busqueda y Tabla -->
-      <div class="col-md-3" style="padding-right: 40px;">
+      <!-- Busqueda y Badges -->
+      <div class="col-md-3" style="padding-right: 30px; padding-left: 30px;">
         <!-- Busqueda -->
         <div class="row">
-          <div class="col-md col-sm-12">
+          <div class="col-md col-sm">
             <form>
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Buscar camiseta">
@@ -57,12 +54,13 @@
           </div>
         </div>
         <br>
-        <!-- Tabla -->
+        <!-- Badges -->
         <div class="row visible-md visible-lg">
           <div class="col-md">
+            <h4><strong>Categorias</strong></h4>
             <div class="list-group">
               <a href="#" class="list-group-item active">
-                Todo<span class="badge">100</span>
+                Todos<span class="badge">100</span>
               </a>
               <a href="#" class="list-group-item">Hombre<span class="badge">4</span></a>
               <a href="#" class="list-group-item">Mujer<span class="badge">12</span></a>
@@ -78,7 +76,7 @@
       </div>
 
       <!-- Carrusel e Imagenes -->
-      <div class="col-md-9">
+      <div class="col-md-9" style="padding-right: 30px; padding-left: 30px;">
         <div class="row">
           <div class="col-md">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -88,7 +86,6 @@
                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
               </ol>
-            
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
@@ -101,7 +98,6 @@
                   <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/banner-slider-3.jpg" alt="Imagen-publicitaria-e-commerce">
                 </div>
               </div>
-                
               <!-- Controls -->
               <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -114,10 +110,12 @@
             </div>
           </div>
         </div>
+
         <!-- Galeria Imagenes -->
         <div class="row" style="margin-top: 20px;">
           <div class="col-md">
             <div class="row">
+              
               <!-- Camiseta 1-->
               <div class="col-md-4 col-sm-4 col-xs-6">
                 <div class="thumbnail">
@@ -125,7 +123,7 @@
                   <div class="caption">
                     <h3>Hipster Ultimate</h3>
                     <p>La Camiseta ideal para hipsters.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">$229</a> 
+                    <p><a href="#" class="btn btn-primary" role="button">$229 <span class="glyphicon glyphicon-shopping-cart"></span></a> 
                     <!--Modal Camiseta 1 -->
                     <a href="#" class="btn btn-default" role="button" data-toggle="modal" data-target="#myModal">Detalles</a>
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -142,7 +140,25 @@
                               <span class="sr-only">Error:</span>
                               Este producto esta agotado.
                             </div>
-
+                            <!-- Imagen y descripcion del modal -->
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-md-3" style="padding-left: 0;">
+                                  <div class="thumbnail">
+                                      <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg" alt="Camiseta Hipster">
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <p>Precio: <strong>$299</strong></p>
+                                  <p>Calificacion: <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphiconglyphicon-star"></span><span class="glyphicon glyphicon-star"><span><span class="glyphicon glyphicon-star-empty"></span></p>
+                                  <div>
+                                    <span class="label label-warning">Hipster</span>
+                                    <span class="label label-default">Deportiva</span>
+                                  </div>
+                                  <button type="button" class="btn btn-link" style="padding-left: 0;"><span class="glyphicon glyphicon-heart"></span> Agregar a los deseos</button>
+                                </div>
+                              </div>
+                            </div>
                             <!-- Descripcion y Comentarios-->
                             <div>
                                 <!-- Nav tabs -->
@@ -152,8 +168,8 @@
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content">
-                                  <div role="tabpanel" class="tab-pane active" id="home"><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit beatae maxime adipisci sapiente illo natus tenetur iure possimus dolore aliquam numquam, cum unde modi harum, voluptatum qui facilis praesentium odit!</div>
-                                  <div role="tabpanel" class="tab-pane" id="profile"><br>
+                                  <div role="tabpanel" class="tab-pane active" id="home" style="padding-left: 15px;"><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit beatae maxime adipisci sapiente illo natus tenetur iure possimus dolore aliquam numquam, cum unde modi harum, voluptatum qui facilis praesentium odit!</div>
+                                  <div role="tabpanel" class="tab-pane" id="profile" style="padding-left: 15px; padding-right: 15px;"><br>
                                     <!-- Panel -->
                                     <div class="panel panel-default">
                                       <!-- Default panel contents -->
@@ -167,7 +183,6 @@
                                 </div>
                               </div>
                           </div>
-
                           <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                             <button type="button" class="btn btn-primary">Comprar</button>
@@ -179,6 +194,7 @@
                   </div>
                 </div>
               </div>
+
               <!-- Camiseta 2-->
               <div class="col-md-4 col-sm-4 col-xs-6">
                 <div class="thumbnail">
@@ -186,10 +202,11 @@
                   <div class="caption">
                     <h3>On Motion Live</h3>
                     <p>Perfecta para salidas rocosas.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">$229</a> <href="#"class="btnbtn-default" role="button">Detalles</a></p>
+                    <p><a href="#" class="btn btn-primary" role="button">$229 <span class="glyphicon glyphicon-shopping-cart"></span></a> <a href="#"class="btn btn-default" role="button">Detalles</a></p>
                   </div>
                 </div>
               </div>
+
               <!-- Camiseta 3 -->
               <div class="col-md-4 col-sm-4 col-xs-6">
                 <div class="thumbnail">
@@ -197,10 +214,11 @@
                   <div class="caption">
                     <h3>Undergroud Max</h3>
                     <p>Para los amantes del undergroud.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">$229</a> <href="#"class="btnbtn-default" role="button">Detalles</a></p>
+                    <p><a href="#" class="btn btn-primary" role="button">$229 <span class="glyphicon glyphicon-shopping-cart"></span></a> <a href="#"class="btn btn-default" role="button">Detalles</a></p>
                   </div>
                 </div>
               </div>
+
               <!-- Camiseta 4 -->
               <div class="col-md-4 col-sm-4 col-xs-6">
                 <div class="thumbnail">
@@ -208,10 +226,11 @@
                   <div class="caption">
                     <h3>Santo Domingo Tigers</h3>
                     <p>En honor en este gran equipo.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">$229</a> <href="#"class="btnbtn-default" role="button">Detalles</a></p>
+                    <p><a href="#" class="btn btn-primary" role="button">$229 <span class="glyphicon glyphicon-shopping-cart"></span></a> <a href="#" class="btn btn-default" role="button">Detalles</a></p>
                   </div>
                 </div>
               </div>
+
               <!-- Camiseta 5 -->
               <div class="col-md-4 col-sm-4 col-xs-6">
                 <div class="thumbnail">
@@ -219,7 +238,7 @@
                   <div class="caption">
                     <h3>Una Camiseta Mas</h3>
                     <p>Nunca sobra una asi cool.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">$229</a> <href="#"class="btnbtn-default" role="button">Detalles</a></p>
+                    <p><a href="#" class="btn btn-primary" role="button">$229 <span class="glyphicon glyphicon-shopping-cart"></span></a> <a href="#" class="btn btn-default" role="button">Detalles</a></p>
                   </div>
                 </div>
               </div>
